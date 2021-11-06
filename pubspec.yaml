@@ -31,7 +31,6 @@ flutter:
 
   assets:
     - images/home/
-    - images/home/rectangle.svg
     - images/google.png
     - images/Background.jpg
     - images/in.jpg
