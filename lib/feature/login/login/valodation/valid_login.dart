@@ -17,7 +17,6 @@ class ValidLogin extends ChangeNotifier {
           _isValid = true;
         } else {
           _number = ModelValid(null, 'شماره نباید کمتر از 11 رقم باشد.');
-          _isValid = false;
         }
       } else {
         _number =
@@ -30,7 +29,7 @@ class ValidLogin extends ChangeNotifier {
   void sendNumber() async {
     try {
       String url = AppData.urlServer+'/login/' ;
-        var response =  await http.post(Uri.parse(url), body: {'mobile': '09397812354',});
+        var response =  await http.post(Uri.parse(url), body: {'mobile':getNumber.value,});
         var json = jsonDecode(response.body);
         print(json['data']['code']);
     }catch (error) {

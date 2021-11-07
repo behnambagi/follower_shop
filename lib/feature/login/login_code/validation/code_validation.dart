@@ -23,12 +23,12 @@ void resend (){
       _code = ModelValid(code, null);
 
       var response = await http.post(Uri.parse(AppData.urlServer + '/code/'),
-          body: {'mobile': '09397812354', 'code_user': codeValid.value});
+          body: {'mobile': number, 'code_user': codeValid.value});
       var json = jsonDecode(response.body);
       if (json['meta']['status'] == true) {
         SharedPreferences prefs = await SharedPreferences.getInstance();
         prefs.setString('token', json['data']['token']);
-        prefs.setString('mobile', '09397812354');
+        prefs.setString('mobile', number);
         AppData.go(context, HomeScreen(), 1, 1);
       } else {
         _code = ModelValid(null, 'کد معتبر نیست !');
