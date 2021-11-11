@@ -41,7 +41,8 @@ class AppData {
     prefs.remove('token');
   }
 
-  static String? tokenApp= 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMCIsImNyZWF0ZV9hdCI6MTYzNTg0MDQ1Mn0=.MDI1NjQ3MGU5NzVlYzU4ZWQwMTEyZGU5NjRlNjUyN2EwN2U1NTdlNjMwOWUxZGRlYjY1YzY2NzNmOTA0ODU3MQ==';
+  static String? tokenApp;
+      // TODO: Add phone user in the future
   static String? numberUser='09397812354';
   static String urlServer = 'https://f.nicetel.ir';
   static go(BuildContext context, Widget screen, double x, double y) {
