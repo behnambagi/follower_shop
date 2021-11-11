@@ -41,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.anchor_sharp),
-                label: 'بلاگ',
+                label: 'دوره ها',
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.person),
