@@ -1,14 +1,19 @@
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:follower_shop/core/styles/AppColor.dart';
+import 'package:follower_shop/feature/home/home_list/provider/home_provider.dart';
 import 'package:follower_shop/feature/home/home_list/widgets/item_home.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class HemeList extends StatelessWidget {
   const HemeList({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+
+    var provider = Provider.of<HomeProvider>(context);
     var h = MediaQuery.of(context).size.height;
+    var w = MediaQuery.of(context).size.width;
     return Column(children: [
       Container(
         decoration: BoxDecoration(
@@ -113,7 +118,10 @@ class HemeList extends StatelessWidget {
                           child: Transform.rotate(
                             angle: 37,
                             child: IconButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  provider.getData();
+
+                                },
                                 icon: Icon(
                                   Icons.logout,
                                   size: 25,
@@ -134,68 +142,23 @@ class HemeList extends StatelessWidget {
                         ))
                   ]),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ItemWidgets.itemHome(
-                        width: 140,
-                        height: 163,
-                        color: AppColor.pale_lilac,
-                        image: 'images/home/follower.svg',
-                        title: 'فالوور اينستاگرام',
-                        listName: 'follower',
-                        context: context),
-                    SizedBox(
-                      width: 16,
-                    ),
-                    ItemWidgets.itemHome(
-                      width: 147,
-                      height: 202,
-                      color: AppColor.light_pink,
-                      image: 'images/home/like.svg',
-                      title: 'لايك اينستاگرام',
-                      context: context,
-                      listName: 'follower',
-                    ),
-                  ],
-                ),
                 SizedBox(
-                  height: 20,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ItemWidgets.itemHome(
-                      width: 130,
-                      height: 160,
-                      color: AppColor.very_light_pink,
-                      image: 'images/home/comment.svg',
-                      title: 'كامنت اينستاگرام',
-                      context: context,
-                      listName: 'follower',
-                    ),
-                    SizedBox(
-                      width: 16,
-                    ),
-                    ItemWidgets.itemHome(
-                      width: 146,
-                      height: 164,
-                      color: AppColor.pale,
-                      image: 'images/home/view.svg',
-                      title: 'بازديد اينستاگرام',
-                      context: context,
-                      listName: 'follower',
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 40,
-                )
+                  height: h*0.80,
+                      width: w*0.79,
+                      child: GridView.builder(
+                          itemCount: provider.list.length,
+                          itemBuilder: (BuildContext context, int index) {
+                            return ItemHome(index: index);
+                          },
+                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 2),
+                        ),
+                    )
+
               ],
             ),
           ),
         ),
       )
     ]);
-  }
-}
+  }}

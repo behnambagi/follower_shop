@@ -1,4 +1,5 @@
 import 'package:follower_shop/core/styles/AppColor.dart';
+import 'package:follower_shop/core/styles/TextStyles.dart';
 import 'package:follower_shop/feature/Lists/provider/provider_store.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -9,9 +10,11 @@ class DetailProduct extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var p = Provider.of<MyStore>(context);
-    return Container(
-      width: MediaQuery.of(context).size.width *0.77,
-      height: 160,
+    var w = MediaQuery.of(context).size.width;
+    return Container( 
+      padding: EdgeInsets.all(10),
+      width:  w* 0.70,
+      height: 100,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(20)),
           color: AppColor.pale_lilac),
@@ -23,27 +26,31 @@ class DetailProduct extends StatelessWidget {
               Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 5.0 , right: 5),
+                    padding: const EdgeInsets.only(left: 5.0, right: 5),
                     child: Icon(Icons.support),
                   ),
-                  Text(p.getActive.supports),
+                  Text(
+                    'داراي پشتيباني',
+                    style: TextStyles.textStyleDetail3,
+                  ),
                 ],
               ),
               Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 5.0 , right: 5),
+                    padding: const EdgeInsets.only(left: 5.0, right: 5),
                     child: Icon(Icons.card_giftcard),
                   ),
-                  Text(p.getActive.gift),
+                  Text('100 تا هديه', style: TextStyles.textStyleDetail3),
                 ],
-              ),Row(
+              ),
+              Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 5.0 , right: 5),
+                    padding: const EdgeInsets.only(left: 5.0, right: 5),
                     child: Icon(Icons.card_giftcard),
                   ),
-                  Text(p.getActive.gift),
+                  Text('100 تا هديه', style: TextStyles.textStyleDetail3),
                 ],
               )
             ],
@@ -54,25 +61,28 @@ class DetailProduct extends StatelessWidget {
               Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 5.0 , right: 5),
+                    padding: const EdgeInsets.only(left: 5.0, right: 5),
                     child: Icon(Icons.speed),
                   ),
-                  Text(p.getActive.speed),
+                  Text('كمترين زمان', style: TextStyles.textStyleDetail3),
                 ],
               ),
               Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 5.0 , right: 5),
-                    child: Icon(Icons.password),),
-                  Text(p.getActive.pass),
+                    padding: const EdgeInsets.only(left: 5.0, right: 5),
+                    child: Icon(Icons.password),
+                  ),
+                  Text('بدون پسورد', style: TextStyles.textStyleDetail3),
                 ],
-              ), Row(
+              ),
+              Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 5.0 , right: 5),
-                    child: Icon(Icons.password),),
-                  Text(p.getActive.pass),
+                    padding: const EdgeInsets.only(left: 5.0, right: 5),
+                    child: Icon(Icons.password),
+                  ),
+                  Text('بدون پسورد', style: TextStyles.textStyleDetail3),
                 ],
               )
             ],
