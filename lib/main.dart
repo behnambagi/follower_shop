@@ -3,15 +3,17 @@ import 'package:follower_shop/feature/login/login_code/validation/code_validatio
 import 'package:follower_shop/feature/splash/splash_screen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter/material.dart';
+import 'package:follower_shop/feature/store/provider/page_product_provider.dart';
 import 'package:provider/provider.dart';
 import 'core/styles/AppColor.dart';
-import 'feature/Lists/provider/provider_store.dart';
+import 'feature/home/home_main/provider/home_provider.dart';
 
 void main() {
 
   runApp(MultiProvider(
     providers: [
-      ChangeNotifierProvider(create: (_) => MyStore()),
+      ChangeNotifierProvider(create: (_) => PageProductProvider()),
+      ChangeNotifierProvider(create: (_) => HomeProvider()),
       ChangeNotifierProvider(create: (_) => ValidLogin()),
       ChangeNotifierProvider(create: (_) => CodeValid()),
     ],

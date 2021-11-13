@@ -1,7 +1,7 @@
 import 'package:follower_shop/feature/home/profile/screen/profile_screen.dart';
 import 'package:flutter/material.dart';
 
-import 'home_list/screen/home_list.dart';
+import 'home_main/screen/home_main.dart';
 import 'list_product/screen/ListProduct.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -15,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
   int _index = 0;
   List<Widget> navigation = [
 
-    HemeList(),
+    HemeMain(),
     ProductMain(),
     ProfileScreen()
   ];

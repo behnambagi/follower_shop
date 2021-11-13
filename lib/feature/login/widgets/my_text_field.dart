@@ -3,18 +3,19 @@ import '../../../core/styles/TextStyles.dart';
 
 class MyTextField extends StatelessWidget {
   MyTextField(
-      {Key? key, required this.type, required this.max,
-      this.onChanged, this.error, required this.label,
-      this.contexts, this.order, required this.icon}) : super(key: key);
+      {Key? key,
+      required this.type, required this.max, this.onChanged,
+      this.error, required this.label, this.contexts, this.order,
+      required this.icon}) : super(key: key);
 
-  TextInputType type;
-  int? max;
-  var onChanged;
-  var error;
-  String label;
-  BuildContext? contexts;
-  String? order;
-  Icon? icon;
+  final TextInputType type;
+  final int? max;
+  final onChanged;
+  final error;
+  final String label;
+  final BuildContext? contexts;
+  final String? order;
+  final Icon? icon;
 
   @override
   Widget build(BuildContext context) {

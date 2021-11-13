@@ -2,7 +2,7 @@ import 'package:follower_shop/core/AppData.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:follower_shop/feature/home/home_list/provider/home_provider.dart';
+import 'package:follower_shop/feature/home/home_main/provider/home_provider.dart';
 import 'package:follower_shop/feature/store/screen/product_screen.dart';
 import 'package:provider/provider.dart';
 

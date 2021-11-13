@@ -1,12 +1,12 @@
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:follower_shop/core/styles/AppColor.dart';
-import 'package:follower_shop/feature/home/home_list/provider/home_provider.dart';
-import 'package:follower_shop/feature/home/home_list/widgets/item_home.dart';
+import 'package:follower_shop/feature/home/home_main/provider/home_provider.dart';
+import 'package:follower_shop/feature/home/home_main/widgets/item_home.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class HemeList extends StatelessWidget {
-  const HemeList({Key? key}) : super(key: key);
+class HemeMain extends StatelessWidget {
+  const HemeMain({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

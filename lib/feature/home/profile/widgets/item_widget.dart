@@ -3,10 +3,10 @@ import 'package:follower_shop/core/styles/TextStyles.dart';
 import 'package:flutter/material.dart';
 
 class ItemProfile extends StatelessWidget {
-  double width;
-  double height;
-  String title;
-  IconData icon;
+  final double width;
+  final double height;
+  final String title;
+  final IconData icon;
 
   ItemProfile(
       {Key? key,

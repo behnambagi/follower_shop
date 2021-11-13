@@ -8,7 +8,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert' as convert;
 
 class PageProduct extends StatefulWidget {
-  int idProduct = 0;
+ final int idProduct;
 
   PageProduct(this.idProduct);
 

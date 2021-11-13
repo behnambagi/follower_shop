@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:follower_shop/feature/home/home_list/model/model_home.dart';
+import 'package:follower_shop/feature/home/home_main/model/model_home.dart';
 
 
 class HomeProvider extends ChangeNotifier{

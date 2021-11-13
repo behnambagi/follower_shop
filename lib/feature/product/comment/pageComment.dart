@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 
 class CommentPage extends StatefulWidget {
-  int product_id = 0;
+  final int product_id;
 
   CommentPage(this.product_id);
 

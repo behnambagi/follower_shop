@@ -17,6 +17,13 @@ class TextStyles {
       fontStyle:  FontStyle.normal,
       fontSize: 18.0
   );
+  static const textStyleDetail3 = const TextStyle(
+      color:  Colors.black,
+      fontWeight: FontWeight.w400,
+      fontFamily: "thin",
+      fontStyle:  FontStyle.normal,
+      fontSize: 17.0
+  );
   static const textStyleDetail2 = const TextStyle(
       color:  Colors.black,
       fontWeight: FontWeight.w400,
